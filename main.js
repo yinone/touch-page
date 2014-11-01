@@ -119,7 +119,9 @@ $(function(){
 			_this.removeClass('slider-hide');
 		};
 
-		if(_this.index())
+		if(_this.index() == 0){
+			
+		}
 
 	});
 
