@@ -120,7 +120,7 @@ $(function(){
 		};
 
 		if(_this.index() == 0){
-		
+			_this.index()
 		}
 
 	});
