@@ -1,0 +1,90 @@
+ <!DOCTYPE html> 
+ <html lang="en">
+ <head>
+ 	<title>新地购物中心</title>
+ 	<meta charset="utf-8" /> 
+ 	<meta name="keywords" content="" /> 
+ 	<meta name="description" content="" /> 
+ 	<meta name="apple-touch-fullscreen" content="yes" /> 
+ 	<meta name="format-detection" content="telephone=no" /> 
+ 	<meta name="apple-mobile-web-app-capable" content="yes" /> 
+ 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+ 	<script type="text/javascript">
+		if(/Android (\d+\.\d+)/.test(navigator.userAgent)){
+			var version = parseFloat(RegExp.$1);
+			if(version>2.3){
+				var phoneScale = parseInt(window.screen.width)/640;
+				document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+			}else{
+				document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+			}
+		}else{
+			document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+		}
+	</script>
+
+ 	<link rel="stylesheet" href="css/style.css">
+ <head>
+
+ <body>
+
+	<!---主体-->
+ 	<section id="wrapper">
+ 		<section id="scroller">
+	 		<ul>
+		 		<li class="page">
+		 			<ul class="img-container">
+		 				<li><img src="images/2.jpg" alt=""></li>
+		 				<li><img src="images/3.jpg" alt=""></li>
+		 				<li><img src="images/4.jpg" alt=""></li>
+		 				<li><img src="images/6.jpg" alt=""></li>
+		 				<li><img src="images/5.jpg" alt=""></li>
+		 				<li><img src="images/6.jpg" alt=""></li>
+		 				<li><img src="images/6.jpg" alt=""></li>
+		 			</ul>
+		 		</li>
+		 		<li class="page">
+		 			<img src="images/1.png" alt="">
+		 		</li>
+		 		<li class="page">
+		 			<ul class="img-container slider">
+		 				<li><img src="images/2.jpg" alt=""></li>
+		 				<li><img src="images/3.jpg" alt=""></li>
+		 				<li><img src="images/4.jpg" alt=""></li>
+		 				<li><img src="images/6.jpg" alt=""></li>
+		 				<li><img src="images/5.jpg" alt=""></li>
+		 				<li><img src="images/6.jpg" alt=""></li>
+		 				<li><img src="images/6.jpg" alt=""></li>
+		 			</ul>
+		 		</li>
+		 		<li class="page">
+					<img src="images/1.png" alt=""> 
+		 		</li>
+		 		<li class="page">
+		 			<img src="images/1.png" alt="">
+		 		</li>
+		 		<li class="page">
+		 			<img src="images/1.png" alt="">
+		 		</li>
+		 		<li class="page">
+					<img src="images/1.png" alt=""> 
+		 		</li>
+		 		<li class="page">
+		 			<img src="images/1.png" alt="">
+		 		</li>
+	 		</ul>
+ 		</section>
+ 	</section>
+
+	<!---底部-->
+ 	<footer class="app-footer"></footer>
+
+ 	<script type="text/javascript" src="js/zepto.js"></script>
+ 	<script type="text/javascript" src="js/touch.js"></script>
+ 	<script type="text/javascript" src="js/iscroll.js"></script>
+ 	<script type="text/javascript" src="js/main.js"></script>
+
+
+ </body>
+ </html>
