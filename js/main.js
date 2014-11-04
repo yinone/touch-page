@@ -95,7 +95,7 @@ $(function(){
 		$showImg = $('.slider') || 0;
 		if($showImg){
 			$('.slider li img').addClass('showOut');
-			var i = 0, t= 0.3, j = $showImg.children().length;
+			var i = 0, t= 0.1, j = $showImg.children().length;
 			for(; i < j; i++) {
 				$showImg.children().eq(i).children('img').css({
 					'-webkit-transition-delay': t+++'s'
