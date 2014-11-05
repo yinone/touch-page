@@ -25,6 +25,7 @@
 	</script>
 
  	<link rel="stylesheet" href="css/style.css">
+ 	<link rel="stylesheet" href="css/font-awesome.min.css">
  <head>
 
  <body>
@@ -33,21 +34,13 @@
  	<section id="wrapper">
  		<section id="scroller">
 	 		<ul>
-		 		<li class="page">
-		 			<ul class="img-container">
-		 				<li><img src="images/2.jpg" alt=""></li>
-		 				<li><img src="images/3.jpg" alt=""></li>
-		 				<li><img src="images/4.jpg" alt=""></li>
-		 				<li><img src="images/6.jpg" alt=""></li>
-		 				<li><img src="images/5.jpg" alt=""></li>
-		 				<li><img src="images/6.jpg" alt=""></li>
-		 				<li><img src="images/6.jpg" alt=""></li>
-		 			</ul>
-		 		</li>
-		 		<li class="page">
+		 		<li class="page"><!---首页-->
 		 			<img src="images/1.png" alt="">
 		 		</li>
-		 		<li class="page">
+		 		<li class="page"><!--项目概况-->
+		 			<img src="images/1.png" alt="">
+		 		</li>
+		 		<li class="page"><!--项目介绍-->
 		 			<ul class="img-container slider">
 		 				<li><img src="images/2.jpg" alt=""></li>
 		 				<li><img src="images/3.jpg" alt=""></li>
@@ -58,20 +51,64 @@
 		 				<li><img src="images/6.jpg" alt=""></li>
 		 			</ul>
 		 		</li>
-		 		<li class="page">
-					<img src="images/1.png" alt=""> 
+		 		<li class="page"><!--户型介绍-->
+		 			<ul class="img-container slider">
+		 				<li><img src="images/2.jpg" alt=""></li>
+		 				<li><img src="images/3.jpg" alt=""></li>
+		 				<li><img src="images/4.jpg" alt=""></li>
+		 				<li><img src="images/6.jpg" alt=""></li>
+		 				<li><img src="images/5.jpg" alt=""></li>
+		 				<li><img src="images/6.jpg" alt=""></li>
+		 				<li><img src="images/6.jpg" alt=""></li>
+		 			</ul>
 		 		</li>
-		 		<li class="page">
-		 			<img src="images/1.png" alt="">
+		 		<li class="page"><!--小区外景图-->
+		 			<ul class="img-container slider">
+		 				<li><img src="images/2.jpg" alt=""></li>
+		 				<li><img src="images/3.jpg" alt=""></li>
+		 				<li><img src="images/4.jpg" alt=""></li>
+		 				<li><img src="images/6.jpg" alt=""></li>
+		 				<li><img src="images/5.jpg" alt=""></li>
+		 				<li><img src="images/6.jpg" alt=""></li>
+		 				<li><img src="images/6.jpg" alt=""></li>
+		 			</ul>
 		 		</li>
-		 		<li class="page">
-		 			<img src="images/1.png" alt="">
+		 		<li class="page"><!--楼盘地址-->
+		 			<div class="btn-box">
+						<a href="" class="btn">在线导航</a>
+						<a href="" class="btn">查看路线</a>
+					</div>
+					<div class="map">
+						<div id="allmap"></div>
+					</div> 
 		 		</li>
-		 		<li class="page">
-					<img src="images/1.png" alt=""> 
-		 		</li>
-		 		<li class="page">
-		 			<img src="images/1.png" alt="">
+		 		<li class="page"><!--预约看房-->
+			 		<form action="" method="post">
+			 			<div class="book">
+							<h2>预约看房</h2>
+							<div class="item">
+								<i class="fa fa-user"></i>
+								<input type='text' value='' name='name' placeholder="姓名"/>
+							</div>
+							<div class="item">
+								<i class="fa fa-male"></i>
+								<input type="radio" name="sex" id="boy"><label for="boy">先生</label>
+								<input type="radio" name="sex" id="girl"><label for="girl">女士</label>
+							</div>
+							<div class="item">
+								<i class="fa fa-mobile"></i>
+								<input type='text' value='' name='mobile' placeholder="电话"/> 
+							</div>
+							<div class="item">
+								<i class="fa fa-calendar"></i>
+								<input type="date" name="date" />
+							</div>
+							<div class="item">
+								
+							</div>
+						</div> 
+			 		</form>
+					
 		 		</li>
 	 		</ul>
  		</section>
@@ -84,7 +121,14 @@
  	<script type="text/javascript" src="js/touch.js"></script>
  	<script type="text/javascript" src="js/iscroll.js"></script>
  	<script type="text/javascript" src="js/main.js"></script>
-
-
+	<script type="text/javascript" src="http://api.map.baidu.com/api?type=quick&ak=K9NemjiXk6W4Recv8ajLVglC&v=1.0"></script>
+	<script type="text/javascript">
+		// 百度地图API功能
+		var map = new BMap.Map("allmap");           
+		var point = new BMap.Point(116.404, 39.915);    
+		map.centerAndZoom(point,15);       
+		// map.setZoom(14);              
+		map.addControl(new BMap.ZoomControl()); //添加地图缩放控件
+	</script>
  </body>
  </html>
