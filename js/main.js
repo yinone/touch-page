@@ -15,11 +15,13 @@ $(function(){
 		momentum: false,
 		hScrollbar: false,
 		deceleration: 0.0003,
-		bounceTime: 1000
-	}),
+		bounceTime: 1000,
+		useTransition: true
+	});
 
+	console.dir(myScroll.options);
 	//variables
-	$page = $('.page'),
+	var $page = $('.page'),
 	$wrapper = $('.wrapper'),
 	$scroller = $('#scroller'),
 	imgHeight = $page.height(),
@@ -78,6 +80,7 @@ $(function(){
 	//获取当前所在Page
 	myScroll.on('beforeScrollStart', function(){
 		currentPage = this.currentPage.pageY;
+
 	});
 
 	//获取滑动方向
@@ -139,6 +142,7 @@ $(function(){
 			imgInit(_sPage);
 		}
 		
+		$
 	});
 
 
@@ -168,7 +172,67 @@ $(function(){
 	 	}
 	});
 
-	//showSlider
+
+	//input validate
+	$('.radio').on('tap', function(){
+
+		$('.radio').children('input').attr('checked','');
+		$(this).children('input').attr('checked','checked');
+	})
+
+	$('#nowSubmit').on('tap', function(){
+
+		var username = $('#name').val(),
+			male = $('input[name="sex"][checked="checked"]').val(),
+			mobile = $('#mobile').val(),
+			date = $('#date').val(),
+			square = $('#square').val();
+
+		var msg = {
+			successMsg: '恭喜您！预约成功！',
+			failMsg: '系统繁忙，请稍后再试！'
+		}
+
+		var reg = /^1\d{10}$/;
+		//console.log(name, male, mobile, date, square);
+
+		if(!username){
+			alert('请输入用户名！');
+		}else if(!reg.test(mobile)){
+			alert('请输入正确的电话号码！');
+		}else if(!date){
+			alert('请输入预约时间！');
+		}else{
+
+
+			$.ajax({
+				url: 'book.php',
+				type: 'post',
+				dataType: 'json',
+				data: {
+					name: username,
+					male: male,
+					mobile: mobile,
+					date: date,
+					square: square
+				},
+				success: function(data){
+					console.dir(data);
+					$('.notice').html(msg.successMsg).addClass('showNotice');
+
+				},
+				error: function(xhr, errorType, error){
+					$('.notice').html(msg.failMsg).addClass('showNotice');
+					console.dir(errorType);
+				}
+			})
+
+		}
+	})
 	
-	
+
+	//showStar
+	$('<i></i>')
+	$('.m-animationBox').append('Some text')
 });
+

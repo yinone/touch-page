@@ -35,11 +35,16 @@
  		<section id="scroller">
 	 		<ul>
 		 		<li class="page"><!---首页-->
+		 			<div class="m-animationBox m-meteorShower"></div>
 		 			<img src="images/1.png" alt="">
+		 			<a href="javascript:void(0);" class="guideTop z-move"></a>
 		 		</li>
+		 		
 		 		<li class="page"><!--项目概况-->
 		 			<img src="images/1.png" alt="">
+		 			<a href="javascript:void(0);" class="guideTop z-move"></a>
 		 		</li>
+		 		
 		 		<li class="page"><!--项目介绍-->
 		 			<ul class="img-container slider">
 		 				<li><img src="images/2.jpg" alt=""></li>
@@ -50,6 +55,9 @@
 		 				<li><img src="images/6.jpg" alt=""></li>
 		 				<li><img src="images/6.jpg" alt=""></li>
 		 			</ul>
+		 			<a href="javascript:void(0);" class="u-guidePrev z-move">prev</a>
+		 			<a href="javascript:void(0);" class="u-guideNext z-move">next</a>
+		 			<a href="javascript:void(0);" class="guideTop z-move"></a>
 		 		</li>
 		 		<li class="page"><!--户型介绍-->
 		 			<ul class="img-container slider">
@@ -61,6 +69,9 @@
 		 				<li><img src="images/6.jpg" alt=""></li>
 		 				<li><img src="images/6.jpg" alt=""></li>
 		 			</ul>
+		 			<a href="javascript:void(0);" class="u-guidePrev z-move">prev</a>
+		 			<a href="javascript:void(0);" class="u-guideNext z-move">next</a>
+		 			<a href="javascript:void(0);" class="guideTop z-move"></a>
 		 		</li>
 		 		<li class="page"><!--小区外景图-->
 		 			<ul class="img-container slider">
@@ -72,6 +83,9 @@
 		 				<li><img src="images/6.jpg" alt=""></li>
 		 				<li><img src="images/6.jpg" alt=""></li>
 		 			</ul>
+		 			<a href="javascript:void(0);" class="u-guidePrev z-move">prev</a>
+		 			<a href="javascript:void(0);" class="u-guideNext z-move">next</a>
+		 			<a href="javascript:void(0);" class="guideTop z-move"></a>
 		 		</li>
 		 		<li class="page"><!--楼盘地址-->
 		 			<div class="btn-box">
@@ -81,34 +95,63 @@
 					<div class="map">
 						<div id="allmap"></div>
 					</div> 
+					<a href="javascript:void(0);" class="guideTop z-move"></a>
 		 		</li>
 		 		<li class="page"><!--预约看房-->
-			 		<form action="" method="post">
-			 			<div class="book">
-							<h2>预约看房</h2>
+		 			<p class="notice"></p>
+		 			<div class='book'>
+						<div class='book-title'>
+							<h2>我们一起拥有</h2>
+							<h2>核心区的清新生活</h2>
+						</div>
+						<div class='book-form'>
+							<h2 class="title">在线预约</h2>
 							<div class="item">
 								<i class="fa fa-user"></i>
-								<input type='text' value='' name='name' placeholder="姓名"/>
+								<input type='text' value='' name='name' placeholder="姓名" id='name'/> 
 							</div>
-							<div class="item">
+							<div class='item'>
 								<i class="fa fa-male"></i>
-								<input type="radio" name="sex" id="boy"><label for="boy">先生</label>
-								<input type="radio" name="sex" id="girl"><label for="girl">女士</label>
+								<span class="radio">
+									<input type="radio" name="sex" id="boy" checked="checked" value="boy">
+									<label for="boy">先生</label>
+								</span>
+								<span class="radio">
+									<input type="radio" name="sex" id="girl" checked="" value="girl">
+									<label for="girl">女士</label>
+								</span>
 							</div>
 							<div class="item">
 								<i class="fa fa-mobile"></i>
-								<input type='text' value='' name='mobile' placeholder="电话"/> 
+								<input type='text' value='' name='mobile' placeholder="电话" id="mobile"/> 
 							</div>
 							<div class="item">
 								<i class="fa fa-calendar"></i>
-								<input type="date" name="date" />
+								<input type='date' value='' name='date' placeholder="" id="date"/> 
 							</div>
 							<div class="item">
-								
+								<i class="fa fa-home"></i>
+								<select name="square" id="square">
+									<option value="" selected="selected">预约面积</option>
+									<option value="112">112㎡</option>
+									<option value="123">123㎡</option>
+									<option value="123">123㎡</option>
+									<option value="123">123㎡</option>
+									<option value="123">123㎡</option>
+									<option value="123">123㎡</option>
+								</select>
+							</div>	
+						</div>
+						<div class="submit">
+							<div class="btn">
+								<a href="javascript:;" id="nowSubmit">立即预约</a>
 							</div>
-						</div> 
-			 		</form>
-					
+							<div class="btn">
+								<a href="tel:05511234572">电话咨询</a>
+							</div>
+						</div>
+					</div> 
+					<a href="javascript:void(0);" class="guideTop z-move"></a>
 		 		</li>
 	 		</ul>
  		</section>
