@@ -5,5 +5,5 @@ Some Javascript files About My Work
 ### PageSlider with HTML5+CSS3 for mobile device
 
 ### useage
-> window.onload = new PageSlider('.page-wrapper',{})
+> window.onload = new Page('.page-wrapper',{})
 
