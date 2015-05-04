@@ -17,19 +17,26 @@
 
 var Page = function(el, opts){
 
+    /*
+    *   @description 移动端切屏动画框架
+    *   @param {object | string} el - 包裹动画元素的父元素，接受css选择器和DO
+    *   @param {object} opts - 可配置选项
+    */
+    
 	var setting = opts || {};
 
-	this.duration = setting.duration || 0.3;
-	this.currentPage = setting.currentPage || 0;
+	this.duration = setting.duration || 0.3; //切屏速度
+	this.currentPage = setting.currentPage || 0; //当前所在page
 
-	this.$el = (typeof el === 'string') ? document.querySelector(el) : el; 
-	this.total = this.$el.children.length - 1;
+	this.$el = (typeof el === 'string') ? document.querySelector(el) : el; //
+	this.total = this.$el.children.length - 1; //所有page
 
 	this.init();
 	this.renderDOM();
 	this.bindDOM();
 }
 
+//初始化page
 Page.prototype.init = function(){
 
 	this.os  = navigator.userAgent
@@ -68,6 +75,7 @@ Page.prototype.init = function(){
 
 }
 
+//插入必要DOM
 Page.prototype.renderDOM = function(){
 
 	this.page = this.wrapper.children;
@@ -79,6 +87,7 @@ Page.prototype.renderDOM = function(){
 	};
 }
 
+//绑定必要DOM事件
 Page.prototype.bindDOM = function(){
 
 	var self = this;
