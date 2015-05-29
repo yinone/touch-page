@@ -11,7 +11,7 @@
 * 见项目中demo.html
 
 ### javascript调用
-    window.onload = new PageSlider('.wrapper')
+    window.onload = new Page('.wrapper')
 
 
 
